@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+
 import { useSelector, useDispatch } from "react-redux";
 import { fetchData } from "../redux/actions/post.actions";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Home() {
   let loading = useSelector((state) => state.post.loading);
@@ -9,12 +10,11 @@ export default function Home() {
   let error = useSelector((state) => state.post.error);
 
   const navigate = useNavigate();
-
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchData());
-  }, []);
+  useEffect(()=>{
+    dispatch(fetchData())
+  },[])
 
   const idPage=(data)=>{
     console.log(data.post)

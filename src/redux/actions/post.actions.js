@@ -3,27 +3,21 @@ import { FETCH_POST_REQUEST, FETCH_POST_SUCCESS, FETCH_POST_FAILURE } from "./ac
 
 
 
-export const fetchDataRequest = ()=>{
-    return{
-        type: FETCH_POST_REQUEST
-    }
-}
+export const fetchDataRequest = ()=> ({
+    type: FETCH_POST_REQUEST
+})
 
-export const fetchDataSuccess = (data)=>{
-    return{
-        type: FETCH_POST_SUCCESS,
-        payload: data
-    }
-}
+export const fetchDataSuccess = (data)=>({
+    type: FETCH_POST_SUCCESS,
+    payload: data
+})
 
-export const fetchDataFailure = (error)=>{
-    return{
-        type: FETCH_POST_FAILURE,
-        payload: error
-    }
-}
+export const fetchDataFailure = (error)=>({
+    type:FETCH_POST_FAILURE,
+    payload: error
+})
 
-export const fetchData = (dispatch)=>{
+export const fetchData = ()=>{
     return (dispatch) => {
         dispatch(fetchDataRequest())
         axios.get('https://jsonplaceholder.typicode.com/posts')

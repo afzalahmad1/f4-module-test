@@ -18,13 +18,15 @@ export const postReducer = (state = initialState, action) =>{
             return({
                 ...state,
                 loading: false,
-                data: action.payload
+                data: action.payload,
+                error: ''
             });
         case FETCH_POST_FAILURE:
             return({
                 ...state,
                 loading: false,
-                error: action.payload
+                error: action.payload,
+                data: []
             })
         default: return state
             
