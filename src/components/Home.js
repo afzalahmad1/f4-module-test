@@ -36,7 +36,8 @@ export default function Home() {
         return ( 
             <div key={post.id} className="item"  onClick={()=> idPage({post})}>
               <img src={`https://picsum.photos/200?random=${post.id}`} alt="post"  className="image"/>
-              <p><strong>User ID:</strong> {post.id}</p>
+              <p><strong>User ID:</strong> {post.userId}</p>
+              <p><strong>Id:</strong> {post.id}</p>
               <p><strong>Title: </strong>{post.title}</p>
               <p> <strong>Body: </strong>{post.body}</p>
             </div>

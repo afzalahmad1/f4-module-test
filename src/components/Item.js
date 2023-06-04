@@ -12,10 +12,10 @@ const location = useLocation();
         <div className="item-page">
           <h1>Details Page For Post With ID {location.state.postDetails.id}</h1>
           <div className="item1">
-              <img src="https://picsum.photos/200?random=${post.id}" alt="post" />
-              <p>User ID: {location.state.postDetails.id}</p>
-              <p>Title: {location.state.postDetails.title}</p>
-              <p>Body: {location.state.postDetails.body}</p>
+              <img src={`https://picsum.photos/200?random=${location.state.postDetails.id}`} alt="post" />
+              <p><strong>User ID: </strong> {location.state.postDetails.userId}</p>
+              <p><strong>Title: </strong> {location.state.postDetails.title}</p>
+              <p><strong>Body: </strong> {location.state.postDetails.body}</p>
             </div>
           </div>
     )
